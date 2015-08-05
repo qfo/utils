@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-
 from ete2 import Tree, TreeStyle, AttrFace, TextFace, add_face_to_node
+__author__ = "Jaime Huerta-Cepas"
+__email__ = "jhcepas@gmail.com"
 
 def layout(node):
     node.img_style["size"] = 0
@@ -68,9 +69,9 @@ if __name__ == "__main__":
     # Render main tree
     for f in ["png", "pdf", "svg"]:
         ts.mode = 'c'
-        t.render('qfo_allbranches_c.%s' %f, tree_style=ts, w=1080, dpi=300)
+        t.render('swisstree_species_allbranches_c.%s' %f, tree_style=ts, w=1080, dpi=300)
         ts.mode = "r"
-        t.render('qfo_allbranches_r.%s'%f, tree_style=ts, w=1080, dpi=300)
+        t.render('swisstree_species_allbranches_r.%s'%f, tree_style=ts, w=1080, dpi=300)
 
     # Delete nodes with B>90, creating multifurcations. Only green branches
     # should remain
@@ -84,7 +85,7 @@ if __name__ == "__main__":
     # Render collapsed tree
     for f in ["png", "pdf", "svg"]:
         ts.mode = 'c'
-        t.render('qfo_collapsed_c.%s' %f, tree_style=ts, w=1080, dpi=300)
+        t.render('swisstree_species_collapsed90_c.%s' %f, tree_style=ts, w=1080, dpi=300)
         ts.mode = "r"
-        t.render('qfo_collapsed_r.%s'%f, tree_style=ts, w=1080, dpi=300)
+        t.render('swisstree_species_collapsed90_r.%s'%f, tree_style=ts, w=1080, dpi=300)
 

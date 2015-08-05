@@ -1,8 +1,9 @@
 #!/usr/bin/python
-
 import sys
 from ete2 import PhyloTree, orthoxml
 import argparse
+__author__ = "Jaime Huerta-Cepas"
+__email__ = "jhcepas@gmail.com"
 
 __DESCRIPTION__ = """
 This is a python script that extracts evolutionary events
